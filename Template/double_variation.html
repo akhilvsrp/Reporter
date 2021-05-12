@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Endless Gain</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+	<!-- View: width - 1750px,  height - 1062px -->
+	<div class="eg_container">
+		<section class="section">
+			<div class="eg_logo">
+				<img src="assets/images/eg_logo.svg">
+			</div>
+			<div class="test_name">
+				<h3>{Client} Experiment Report</h3>
+				<h1>{Test_Name}</h1>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="eg_logo">
+				<img src="assets/images/eg_logo.svg">
+			</div>
+			<div class="summary_heading">Executive Summary: {Test_Name}</div>
+			<div class="summary_block">
+				<div class="summary_left">
+					<div class="summary_h3">Hypothesis</div>
+					<div class="summary_p">
+						<p><b>We observed...</b></p>
+						<p>{Hypothesis_1}</p>
+						<p><b>We believe... </b></p>
+						<p>{Hypothesis_2}</p>
+						<p><b>We will know this when... </b></p>
+						<p>{Hypothesis_3}</p>
+					</div>
+
+					<div class="summary_h3 mt-6">Psychological Principles</div>
+					<div class="summary_p">
+						<p>The primary psychological technique being used in this experiment is {Pysch_Principles}.
+						</p>
+						<p>{Pysch_Principle_Description}</p>
+					</div>
+				</div>
+				<div class="summary_right">
+					<div class="summary_h3">Experiment Data</div>
+					<div class="summary_p">
+						<ul class="ml-4">
+							<li>This experiment ran for {noOfDays} days from {StartDate} until {EndDate}</li>
+							<li>A total of {NoOfUsers} users and {NoOfTransactions} transactions passed through the experiment.</li>
+							<li>The experiment ran on {Device_List}.</li>
+						</ul>
+					</div>
+					<div class="summary_h3 mt-6">Results</div>
+					<div class="summary_p">
+						<ul class="ml-4">
+							<li>During the observed period {experimentResultText}</li>
+							</li>
+							<!-- <ul style="list-style-type:none;">
+								<li> <b>{conversionRate}</b> UCR change against Control</li>
+								<li> <b>{chanceOfBeatingControl}</b> chance of being better than the Control</li>
+								<li> {RevenueFigure} </li>
+							</ul> -->
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		{desktopExists}
+        
+        <section class="section">
+			<div class="eg_logo">
+				<img src="assets/images/eg_logo.svg">
+			</div>
+			<div class="summary_block">
+				<div class="summary_col-30">
+					<div class="summary_heading">Desktop: Control</div>
+					<div class="desktop_img">
+						<img src="assets/images/{location}/jiraData/desktop_ctrl.png">
+					</div>
+				</div>
+				<div class="summary_col-30 ml-6">
+					<div class="summary_heading">Desktop: Challenger 1</div>
+					<div class="desktop_img">
+						<img src="assets/images/{location}/jiraData/desktop_v1.png">
+						<div class="summary_p mt-4">
+                            <p>{desktop_change_description}</p>
+						</div>
+					</div>
+				</div>
+				<div class="summary_col-30 ml-6">
+					<div class="summary_heading">Desktop: Challenger 2</div>
+					<div class="desktop_img">
+						<img src="assets/images/{location}/jiraData/desktop_v2.png">
+                    </div>
+                    <div class="summary_p mt-4">
+                        <p>{desktop_change_description_2}</p>
+                    </div>
+				</div>
+			</div>
+		</section>
+
+		{desktopExistsEnd}
+		{mobileExists}
+
+		<section class="section">
+			<div class="eg_logo">
+				<img src="assets/images/eg_logo.svg">
+			</div>
+			<div class="summary_block">
+				<div class="mobile_block1">
+					<div class="summary_heading">Mobile: Control</div>
+					<div class="mobile_img">
+						<img src="assets/images/{location}/jiraData/mobile_ctrl.png">
+					</div>
+				</div>
+				<div class="mobile_block2">
+					<div class="summary_heading">Mobile: Challenger 1</div>
+					<div class="mobile_img">
+						<img src="assets/images/{location}/jiraData/mobile_v1.png">
+					</div>
+					<div class="mobile_text">
+						<p>{mobile_change_description}</p>
+					</div>
+				</div>
+				<div class="mobile_block3">
+					<div class="summary_heading">Mobile: Challenger 2</div>
+					<div class="mobile_img">
+						<img src="assets/images/{location}/jiraData/mobile_v2.png">
+					</div>
+					<div class="mobile_text">
+						<p>{mobile_change_description_2}</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		{mobileExistsEnd}
+		{tabletExists}
+
+		<section class="section">
+			<div class="eg_logo">
+				<img src="assets/images/eg_logo.svg">
+			</div>
+			<div class="summary_block">
+				<div class="mobile_block1">
+					<div class="summary_heading">Tablet: Control</div>
+					<div class="mobile_img">
+						<img src="assets/images/{location}/jiraData/tablet_ctrl.png">
+					</div>
+				</div>
+				<div class="mobile_block2">
+					<div class="summary_heading">Tablet: Challenger 1</div>
+					<div class="mobile_img">
+						<img src="assets/images/{location}/jiraData/tablet_v1.png">
+					</div>
+					<div class="mobile_text">
+                        <p>{tablet_change_description}</p>
+					</div>
+				</div>
+				<div class="mobile_block3">
+					<div class="summary_heading">Tablet: Challenger 2</div>
+					<div class="mobile_img">
+						<img src="assets/images/{location}/jiraData/tablet_v2.png">
+					</div>
+					<div class="mobile_text">
+						<p>{tablet_change_description_2}</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		{tabletExistsEnd}
+		{desktopExists}
+        
+
+		<section class="section">
+			<div class="eg_logo">
+				<img src="assets/images/eg_logo.svg">
+			</div>
+			<div class="graph_heading">Daily Result: Desktop (Cumulative User Conversion Rate)</div>
+			<div class="summary_block">
+				<div class="graph_img">
+					<img src="assets/images/{location}/graphs/Daily_Cummulative_desktop.jpeg">
+				</div>
+				<div class="test_result">
+					<div class="test_result_left test_result_block">
+						<h5>Challenger 1</h5>
+						<h2>{DesktopLift}</h2>
+						<p>UCR Change</p>
+					</div>
+					<div class="test_result_right test_result_block ml-6">
+						<h5>Challenger 1</h5>
+						<h2>{DesktopChance}</h2>
+						<p>Chance of beating control</p>
+                    </div>
+                    
+                    <div class="test_result_right test_result_block ml-6">
+						<h5>Challenger 2</h5>
+						<h2>{DesktopLift2}</h2>
+						<p>UCR Change</p>
+					</div>
+					<div class="test_result_right test_result_block ml-6">
+						<h5>Challenger 2</h5>
+						<h2>{DesktopChance2}</h2>
+						<p>Chance of beating control</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{desktopExistsEnd}
+		{mobileExists}
+
+
+		<section class="section">
+			<div class="eg_logo">
+				<img src="assets/images/eg_logo.svg">
+			</div>
+			<div class="graph_heading">Daily Result: Mobile (Cumulative User Conversion Rate)</div>
+			<div class="summary_block">
+				<div class="graph_img">
+					<img src="assets/images/{location}/graphs/Daily_Cummulative_mobile.jpeg">
+				</div>
+				<div class="test_result">
+					<div class="test_result_left test_result_block">
+						<h5>Challenger 1</h5>
+						<h2>{MobileLift}</h2>
+						<p>UCR Change</p>
+					</div>
+					<div class="test_result_right test_result_block ml-6">
+						<h5>Challenger 1</h5>
+						<h2>{MobileChance}</h2>
+						<p>Chance of beating control</p>
+                    </div>
+                    <div class="test_result_right test_result_block ml-6">
+						<h5>Challenger 2</h5>
+						<h2>{MobileLift2}</h2>
+						<p>UCR Change</p>
+					</div>
+					<div class="test_result_right test_result_block ml-6">
+						<h5>Challenger 2</h5>
+						<h2>{MobileChance2}</h2>
+						<p>Chance of beating control</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{mobileExistsEnd}
+		{tabletExists}
+
+		<section class="section">
+			<div class="eg_logo">
+				<img src="assets/images/eg_logo.svg">
+			</div>
+			<div class="graph_heading">Daily Result: Tablet (Cumulative User Conversion Rate)</div>
+			<div class="summary_block">
+				<div class="graph_img">
+					<img src="assets/images/{location}/graphs/Daily_Cummulative_tablet.jpeg">
+				</div>
+				<div class="test_result">
+                    <div class="test_result_left test_result_block">
+						<h5>Challenger 1</h5>
+						<h2>{TabletLift}</h2>
+						<p>UCR Change</p>
+					</div>
+					<div class="test_result_right test_result_block ml-6">
+						<h5>Challenger 1</h5>
+						<h2>{TabletChance}</h2>
+						<p>Chance of beating control</p>
+                    </div>
+                    <div class="test_result_right test_result_block ml-6">
+						<h5>Challenger 2</h5>
+						<h2>{TabletLift2}</h2>
+						<p>UCR Change</p>
+					</div>
+					<div class="test_result_right test_result_block ml-6">
+						<h5>Challenger 2</h5>
+						<h2>{TabletChance2}</h2>
+						<p>Chance of beating control</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{tabletExistsEnd}
+
+		<section class="section">
+			<div class="eg_logo">
+				<img src="assets/images/eg_logo.svg">
+			</div>
+			<div class="graph_heading">Result</div>
+			<div class="summary_block">
+				<div class="mobile-result-table">
+					{overallExists}
+					<h2>Overall</h2>
+					<img src="assets/images/{location}/tables/Overall.jpg" class="mt-10 graph_img">
+					{overallExistsEnd}
+					{desktopExists}
+					<h2>Desktop</h2>
+					<img src="assets/images/{location}/tables/Device_desktop.jpg" class="mt-10 graph_img">
+					{desktopExistsEnd}
+					{mobileExists}
+					<h2>Mobile</h2>
+					<img src="assets/images/{location}/tables/Device_mobile.jpg" class="mt-10 graph_img">
+					{mobileExistsEnd}
+					{tabletExists}
+					<h2>Tablet</h2>
+					<img src="assets/images/{location}/tables/Device_tablet.jpg" class="mt-10 graph_img">
+					{tabletExistsEnd}
+
+				</div>
+			</div>
+		</section>
+
+		{overallExists}
+		<section class="section">
+			<div class="eg_logo">
+				<img src="assets/images/eg_logo.svg">
+			</div>
+			<div class="graph_heading">Result</div>
+			<div class="summary_block">
+				<div class="mobile-result-table">
+					<h2>Returning Users</h2>
+					<img src="assets/images/{location}/tables/User_Returning Visitor.jpg" class="mt-10 graph_img">
+					<h2>New Users</h2>
+					<img src="assets/images/{location}/tables/User_New Visitor.jpg" class="mt-10 graph_img">
+				</div>
+			</div>
+		</section>
+		{overallExistsEnd}
+
+		{overallExistsNeg}
+		<section class="section">
+			<div class="eg_logo">
+				<img src="assets/images/eg_logo.svg">
+			</div>
+			<div class="graph_heading">Result</div>
+			<div class="summary_block">
+				<div class="mobile-result-table">
+					<h2>Returning Users</h2>
+
+					{desktopExists2}
+					<h3>Desktop</h3>
+					<img src="assets/images/{location}/tables/Desktop_Returning Visitor.jpg" class="mt-10 graph_img">
+					{desktopExistsEnd2}
+					{mobileExists2}
+					<h3>Mobile</h3>
+					<img src="assets/images/{location}/tables/Mobile_Returning Visitor.jpg" class="mt-10 graph_img">
+					{mobileExistsEnd2}
+					{tabletExists2}
+					<h3>Tablet</h3>
+					<img src="assets/images/{location}/tables/Tablet_Returning Visitor.jpg" class="mt-10 graph_img">
+					{tabletExistsEnd2}
+				</div>
+			</div>
+		</section>
+
+
+		<section class="section">
+			<div class="eg_logo">
+				<img src="assets/images/eg_logo.svg">
+			</div>
+			<div class="graph_heading">Result</div>
+			<div class="summary_block">
+				<div class="mobile-result-table">
+					<h2>New Users</h2>
+					{desktopExists2}
+					<h3>Desktop</h3>
+					<img src="assets/images/{location}/tables/Desktop_New Visitor.jpg" class="mt-10 graph_img">
+					{desktopExistsEnd2}
+					{mobileExists2}
+					<h3>Mobile</h3>
+					<img src="assets/images/{location}/tables/Mobile_New Visitor.jpg" class="mt-10 graph_img">
+					{mobileExistsEnd2}
+					{tabletExists2}
+					<h3>Tablet</h3>
+					<img src="assets/images/{location}/tables/Tablet_New Visitor.jpg" class="mt-10 graph_img">
+					{tabletExistsEnd2}
+				</div>
+			</div>
+		</section>
+		{overallExistsEndNeg}
+
+		{revenueForecastGraph}
+		<section class="section">
+			<div class="eg_logo">
+				<img src="assets/images/eg_logo.svg">
+			</div>
+			<div class="graph_heading">Revenue Forecast</div>
+			<div class="summary_block">
+				<div class="graph_img">
+					<img src="assets/images/{location}/graphs/Revenue.jpeg">
+				</div>
+				<div class="test_result">
+					<div class="test_result_left test_result_block">
+						<h5>User conversion rate:</h5>
+						<h2>{conversionRate}%</h2>
+						<p>User conversion rate change</p>
+					</div>
+					<div class="test_result_right test_result_block ml-6">
+						<h5></h5>
+						<h2>{chanceOfBeatingControl}%</h2>
+						<p>Change of beating control</p>
+					</div>
+					<div class="test_result_right test_result_block ml-6">
+						<h5></h5>
+						<h2>£{RevenueUplift}</h2>
+						<p>Forecast revenue uplift</p>
+					</div>
+				</div>
+				<div class="test_result_comment">
+					This baseline forecast has been generated through Machine Learning using Time series forecasting.
+					Through Time series forecasting we are able to predict future values based on previously observed
+					values. As of today {todayDate} this model is trained to within a 15%+/- margin of error.
+				</div>
+			</div>
+		</section>
+		{revenueForecastGraphEnd}
+
+		
+		<!-- <section class="section">
+			<div class="eg_logo">
+				<img src="assets/images/eg_logo.svg">
+			</div>
+			<div class="graph_heading">Change of being best analysis</div>
+			<div class="summary_block mt-5">
+				<div class="mobile-result-graph-1">
+					<img src="assets/images/{location}/tables/All_Combinations.jpg" class="mt-10 graph_img_table">
+				</div>
+			</div>
+		</section> -->
+
+		<section class="section">
+			<div class="eg_logo">
+				<img src="assets/images/eg_logo.svg">
+			</div>
+			<div class="thankyou">
+				<h5>Thank You</h5>
+				<p>endlessgain.com</p>
+				<p>hello@endlessgain.com</p>
+			</div>
+		</section>
+
+	</div>
+</body>
+
+</html>
